@@ -4,4 +4,4 @@
 
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 
-![obj](src/1_obj.gif)
+![obj](src/1_obj.png)
