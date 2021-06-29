@@ -1,7 +1,13 @@
-# js-practice
+// Implement the possibility using a prototype,
+// that each array has a new method that allows you 
+// to double the value of each element, given the data type, so that:
+// 1. For numbers, this is squaring
+// 2. For strings, this is a doubling of a string
 
-## 2. Define a method for all arrays (using the prototype)
-```JS
+// Example:
+// [1, 2, 3] => [1, 4, 9]
+// [5, 'Hello', 6] => [25, 'HelloHello', 36]
+
 var a = [1, 2, 3]
 var b = [5, 'Hello', 6]
 
@@ -24,12 +30,3 @@ var newB = b.double()
 
 console.log('A', newA.double())
 console.log('B', newB)
-````
-
-![obj](src/2_arr.png)
-
-## 1. Creating and configuring an object
-
-https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-
-![obj](src/1_obj.png)
