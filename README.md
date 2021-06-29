@@ -72,7 +72,7 @@ circle.$el.addEventListener('mouseleave', () => {
 })
 ```
 
-![class](src/classes.png)
+![class](src/3_classes.png)
 
 ## 2. Define a method for all arrays (using the prototype)
 ```JS
