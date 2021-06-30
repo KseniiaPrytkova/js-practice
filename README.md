@@ -87,7 +87,7 @@ promise.then(function() {
 // })
 ```
 
-![obj](src/callback_vs_promise.png)
+![callback_vs_promise](src/4_callback_vs_promise.giv)
 
 ## 3. Classes and inheritance
 ```JS
