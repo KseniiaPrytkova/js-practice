@@ -1,5 +1,51 @@
 # js-practice
 
+## 5. Upload users with fetch()
+
+Upload a list of users from the server (mock data from https://jsonplaceholder.typicode.com/users)
+
+### Promise approach
+```JS
+function load() {
+  var url = 'https://jsonplaceholder.typicode.com/users'
+  
+  fetch(url)
+    .then(function(response) {
+      return response.json()
+    })
+    .then(function(data) {
+      var ul = document.querySelector('#list')
+
+      var html = data.map(function(item) {
+        return '<li>' + item.id + ' ' + item.name + ' (' + item.email + ')</li>'
+      })
+      
+      ul.insertAdjacentHTML('afterbegin', html.join(' '))
+    })
+}
+```
+
+### Async Await approach
+```JS
+document.querySelector('#load').addEventListener('click', load)
+
+async function load() {
+  var url = 'https://jsonplaceholder.typicode.com/users'
+
+  var response = await fetch(url)
+  var data = await response.json()
+
+  var ul = document.querySelector('#list')
+
+  var html = data.map(function(item) {
+    return '<li>' + item.id + ' ' + item.name + ' (' + item.email + ')</li>'
+  })
+  
+  ul.insertAdjacentHTML('afterbegin', html.join(' '))
+}
+```
+![upload_users](src/5_upload_users.png)
+
 ## 4. Callback vs Promise
 implement
 ``` 
@@ -12,7 +58,7 @@ console.log('Client: I want to get a list of users')
 console.log('...')
 
 setTimeout(function() {
-  console.log('Сервер: запрашиваю список пользователей в БД')
+  console.log('Server: requesting a list of users in the database')
   console.log('...')
 
   setTimeout(function() {
